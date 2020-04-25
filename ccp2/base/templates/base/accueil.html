@@ -1,0 +1,337 @@
+ {% extends 'base/base.html' %} {% load static %}
+
+
+
+<!-- <div class="container"> -->
+{% block logo %}
+<div class="col-2">
+    <a href="#portfolio">
+        <img src="{% static 'img/logo2.png' %}" class="img-fluid" alt="logo" id="logo">
+    </a>
+</div>{% endblock %}
+
+
+<!---------------------- Carroussel ------------------------>
+{% block accueil %}
+
+<div id="carouselExampleCaptions" class="carousel slide text-center" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="#">
+                <img src="{% static 'img/projet.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h3>Une idée de projet, n'hésitez pas à nous contacter</h3>
+                    <p class="d-none d-md-block">Vous propose des solutions pour le développement de votre site.</p>
+                </div>
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a href="#">
+                <img src="{% static 'img/form.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h3>Vous souhaitez rejoindre nos formations.</h3>
+
+                    <p class="d-none d-md-block">Webmag-Agency vous propose un panel de formations dédiées à l'amélioration de votre visibilité Web.</p>
+                </div>
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a href="#">
+                <img src="{% static 'img/recrutement1.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h3>L'agence recrute</h3>
+                    <p class="d-none d-md-block">Webmag-Agency dispose d'un espace de recrutement pour venir compléter ses équipes.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<!------------------------------ recherche --------------------->
+
+<div class="col-12 col-md-12" id="recherche">
+    <form class="form-inline ">
+        <input class="form-control col-4 offset-3 mr-sm-2" id="bouton_recherche" type="search" placeholder="Recherche">
+        <button class="btn btn-primary" type="submit">entrée</button>
+    </form>
+</div>
+<!-- </div> -->
+
+<!-----------------portfolio--------------->
+
+<div class="container-fluid">
+    <section class="page-section bg2" id="portfolio">
+        <div class="row">
+            <div class="col text-center" id="site">Webmag-Agency est à votre service</div>
+        </div>
+        <div class="container" id="service">
+            <div class="row">
+                <div class=" col-6 col-md-4  portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <h4>Espace Recrutement</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src=" {% static 'img/recrutement.jpg' %} " alt="recrutement ">
+                    </a>
+                </div>
+                <div class=" col-6 col-md-4 portfolio-item ">
+                    <a class="portfolio-link " data-toggle="modal " href="# ">
+                        <div class="portfolio-hover ">
+                            <div class="portfolio-hover-content ">
+                                <h4>Espace Formation</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src="{% static 'img/formation.jpg' %} " alt="formation ">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 portfolio-item ">
+                    <a class="portfolio-link " data-toggle="modal " href="# ">
+                        <div class="portfolio-hover ">
+                            <div class="portfolio-hover-content ">
+                                <h4>Espace Projets</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src="{% static 'img/projet.jpg' %} " alt="projet ">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 portfolio-item ">
+                    <a class="portfolio-link " data-toggle="modal " href="# ">
+                        <div class="portfolio-hover ">
+                            <div class="portfolio-hover-content ">
+                                <h4>Nos services</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src="{% static 'img/services.png' %} " alt="services ">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 portfolio-item ">
+                    <a class="portfolio-link " data-toggle="modal " href="# ">
+                        <div class="portfolio-hover ">
+                            <div class="portfolio-hover-content ">
+                                <h4>Nos références</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src="{% static 'img/reference.PNG' %} " alt="références ">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 portfolio-item ">
+                    <a class="portfolio-link " data-toggle="modal " href="# ">
+                        <div class="portfolio-hover ">
+                            <div class="portfolio-hover-content ">
+                                <h4>Espace coworking</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src="{% static 'img/coworking.PNG' %} " alt="coworking ">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 portfolio-item ">
+                    <a class="portfolio-link " data-toggle="modal " href="# ">
+                        <div class="portfolio-hover ">
+                            <div class="portfolio-hover-content ">
+                                <h4>Blog</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src="{% static 'img/blog.PNG' %} " alt="blog ">
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 portfolio-item ">
+                    <a class="portfolio-link " data-toggle="modal " href="# ">
+                        <div class="portfolio-hover ">
+                            <div class="portfolio-hover-content ">
+                                <h4>Agenda</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src="{% static 'img/agenda.PNG' %} " alt="agenda ">
+                    </a>
+                </div>
+                <div class="col-md-4 d-none d-md-block portfolio-item ">
+                    <a class="portfolio-link " data-toggle="modal " href="# ">
+                        <div class="portfolio-hover ">
+                            <div class="portfolio-hover-content ">
+                                <h4>Annuaire</h4>
+                            </div>
+                        </div>
+                        <img class="img-fluid portfolio-img" src="{% static 'img/annuaire.PNG' %} " alt="annuaire ">
+                    </a>
+                </div>
+                <div class="row ">
+                    <div class="col-6 offset-3 d-block d-sm-none portfolio-item ">
+                        <a class="portfolio-link " data-toggle="modal " href="# ">
+                            <div class="portfolio-hover ">
+                                <div class="portfolio-hover-content ">
+                                    <h4>Annuaire</h4>
+                                </div>
+                            </div>
+                            <img class="img-fluid portfolio-img" src="{% static 'img/annuaire.PNG' %} " alt="annuaire ">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+<!---------------------- Footer -------------------------->
+
+<div class="container-fluid ">
+    <footer class="page-footer font-small pt-4 bg2 " id="footer ">
+        <div class="container ">
+            <div class="row text-center text-md-left mt-3 pb-3 ">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
+                    <h6 class="text-uppercase mb-4 font-weight-bold ">PLAN DU SITE</h6>
+                    <p>
+                        <a href="#accueil ">Accueil</a>
+                    </p>
+                    <p>
+                        <a href="#! "> Nos formations</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Recrutement</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Nos services</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Espace projets</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Espace Coworking</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Nos références</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Annuaire</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Blog</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Agenda</a>
+                    </p>
+                </div>
+                <hr class="w-100 clearfix d-md-none ">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
+                    <h6 class="text-uppercase mb-4 font-weight-bold ">informations</h6>
+                    <p>
+                        <a href="#page-top ">FAQ</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Conditions d'utilisation</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Politique de confidentialité</a>
+                    </p>
+                    <p>
+                        <a href="#! ">A propos</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Mentions légales</a>
+                    </p>
+
+                </div>
+                <hr class="w-100 clearfix d-md-none ">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
+                    <h6 class="text-uppercase mb-4 font-weight-bold ">MON COMPTE</h6>
+                    <p>
+                        <a href="#! ">Mes adresses</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Mes informations</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Annuaire personnel</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Mes projets</a>
+                    </p>
+                    <p>
+                        <a href="#! ">Mes recherches récentes</a>
+                    </p>
+                </div>
+                <hr class="w-100 clearfix d-md-none ">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
+                    <h6 class="text-uppercase mb-4 font-weight-bold ">Nous suivre</h6>
+                    <p>
+                        <a href="https://www.facebook.com/ " target="blank ">
+                            <i class="fa fa-facebook-official mr-3 " aria-hidden="true "></i>Facebook</a>
+                    </p>
+                    <p>
+                        <a href="https://twitter.com/?lang=fr " target="blank ">
+                            <i class="fa fa-twitter mr-3 " aria-hidden="true "></i>Twitter
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.youtube.com/?hl=fr&gl=FR " target="blank ">
+                            <i class="fa fa-youtube mr-3 " aria-hidden="true "></i>YouTube
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://fr.linkedin.com/ " target="blank ">
+                            <i class="fa fa-linkedin mr-3 " aria-hidden="true "></i>Linkedin
+                        </a>
+                    </p>
+                </div>
+                <hr class="w-100 clearfix d-md-none ">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
+                    <h6 class="text-uppercase mb-4 font-weight-bold ">Contactez nous</h6>
+                    <p>
+                        <i class="fa fa-edit mr-3 " aria-hidden="true "></i>Prendre un rendez-vous
+                    </p>
+                    <p>
+                        <i class="fa fa-paper-plane mr-3 " aria-hidden="true "></i>contact@webmag-agency.com
+                    </p>
+                    <p>
+                        <i class="fa fa-phone mr-3 " aria-hidden="true "></i> 01 42 33 52 89
+                    </p>
+                    <p>
+                        <a href="https://www.google.fr/maps/place/Chateau+de+Clauzuroux/@45.4320062,0.3108862,12.75z/data=!4m8!3m7!1s0x47ffb909874e4129:0xab533434c37aab3a!5m2!4m1!1i2!8m2!3d45.409568!4d0.356325 "><i class="fa fa-map-marker mr-3
+                            " aria-hidden="true "></i>Le Clauzuroux 
+                            <br>24320 Champagne et Fontaine
+                        </a>
+                    </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d89596.02360314464!2d0.3108862!3d45.4320062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ffb909874e4129%3A0xab533434c37aab3a!2sChateau%20de%20Clauzuroux!5e0!3m2!1sfr!2sfr!4v1584548826822!5m2!1sfr!2sfr "
+                        width="280 " height="200 " frameborder="0 " style="border:0; " allowfullscreen=" " aria-hidden="false " tabindex="0 "></iframe>
+
+                </div>
+            </div>
+
+
+            <div class="row d-flex align-items-center ">
+                <div class="col-md-7 col-lg-8 ">
+                    <p class="text-center text-md-left ">© 2020 Copyright</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+{% endblock %}

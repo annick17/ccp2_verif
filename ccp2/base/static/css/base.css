@@ -1,0 +1,210 @@
+    body,
+    html {
+        height: 100%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 14px;
+        width: 100vw;
+    }
+    
+    .img-fluid {
+        height: 100%;
+        width: auto;
+        z-index: 999;
+    }
+    
+    .portfolio-img {
+        height: 80%;
+    }
+    
+    #nav {
+        z-index: 900;
+    }
+    
+    #titre {
+        margin-top: 7%;
+    }
+    
+    h1 {
+        font-size: 22px;
+        color: black;
+        position: absolute;
+        top: 10%;
+        left: 35%;
+    }
+    
+    h2 {
+        color: black;
+        font-size: .75rem;
+    }
+    
+    #contact {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+    }
+    
+    h3 {
+        font-size: 23px;
+        color: white;
+    }
+    
+    h4 {
+        font-size: 15px;
+    }
+    
+    p {
+        color: black;
+        font-size: 14px;
+    }
+    
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .bg {
+        background-image: url("../img/background4.png");
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+    }
+    
+    .bg2 {
+        background-color: #e0f1f9;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+    }
+    
+    #site {
+        font-size: 20px;
+        font-weight: bold;
+        bottom: 12px;
+        margin-top: 5%;
+    }
+    
+    #portfolio {
+        height: 295vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    #service {
+        margin-top: 2%;
+    }
+    
+    .page-footer {
+        height: 560vh;
+    }
+    
+    .page-footer p {
+        line-height: 1em;
+    }
+    
+    .importantbordel {
+        color: #9d592a;
+        text-shadow: 2px 2px 8px black;
+        text-decoration: underline;
+    }
+    
+    a {
+        color: #090909
+    }
+    
+    #carouselExampleCaptions {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 64%;
+        transform: translateX(-50%);
+    }
+    
+    .carousel-caption {
+        bottom: 50%;
+        transform: translateY(50%);
+        background-color: #00000066;
+    }
+    
+    .carousel-caption p {
+        color: white;
+    }
+    /* #carouselExampleCaptions {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+} */
+    
+    .carousel-indicators li {
+        background-color: black;
+    }
+    
+    .carousel-control-next {
+        color: black;
+    }
+    /* .carousel-caption p {
+    font-size: 17px;
+} */
+    
+    #recherche {
+        position: absolute;
+        color: white;
+        width: 100%;
+        bottom: 10px;
+        top: 85%;
+    }
+    
+    #message {
+        position: absolute;
+        bottom: 17%;
+        width: 100%;
+        background-color: #000000cc;
+    }
+    /* Navbar section */
+    
+    #nav {
+        float: right;
+    }
+    /* media queries */
+    
+    @media screen and (min-width: 961px) {
+        h2 {
+            font-size: 1rem;
+        }
+        #carouselExampleCaptions {
+            left: 52%;
+            width: 72%;
+        }
+        #recherche {
+            top: 91%;
+            margin-left: 5%;
+        }
+        h3 {
+            font-size: 28px;
+        }
+        h4 {
+            font-size: 1.5rem;
+        }
+        #site {
+            font-size: 30px;
+        }
+        .page-footer {
+            height: 95vh;
+        }
+        #portfolio {
+            height: 110vh;
+        }
+        #footer p {
+            line-height: 1em;
+        }
+    }
+    /* formulaire */
+    
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
