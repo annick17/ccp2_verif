@@ -26,6 +26,6 @@ urlpatterns = [
     path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
     path('', include('base.urls')),
     path('email/', include('sendemail.urls')),
-    
+    path('blog/', include('blog.urls')),
 ]
 
