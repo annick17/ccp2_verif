@@ -18,9 +18,15 @@
 
     <div class="container-fluid bg">
         <div class="row">
-            {% block logo %} {% endblock %}
+            {% block logo %}
+            <div class="col-2">
+                <a href="{% url 'accueil' %}" class="logo">
+                    <img src="{% static 'img/logo2.png' %}" class="img-fluid" alt="logo" id="logo">
+                </a>
+            </div>
+            {% endblock %}
             <div class="row">
-                <nav class="col-12 navbar navbar-expand-md fixed-top justify-content-end">
+                <nav class="col-11 offset-1 col-md-12 navbar navbar-expand-md fixed-top justify-content-end">
                     {% if user.is_authenticated %}
                     <h2> Bienvenue {{ user.username }} ! &emsp;&emsp;&emsp;&emsp;
                         <a href="{% url 'logout' %}">DECONNEXION</a> </h2>{% else %}
@@ -36,16 +42,11 @@
                     <a class="nav-link" href="#"><strong><h2 class="importantbordel">NOUS RECRUTONS</h2></strong></a>
                 </nav>
             </div>
-            <div class="col-8 d-none d-sm-block" id="titre">
-                <a href="#portfolio">
-                    <h1><strong>Bienvenue chez Webmag-Agency</strong></h1>
-                </a>
-            </div>
-
+            {% block titre %}{% endblock %}
         </div>
 
 
-    </div> {% block accueil %} {% endblock %} {% block page_content %} {% endblock %} {% block contact %} {% endblock %}
+    </div> {% block accueil %} {% endblock %} {% block page_content %} {% endblock %} {% block contact %} {% endblock %} {% block blog %} {% endblock %}
 </body>
 
 </html>

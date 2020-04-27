@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %} {% load static %} {% block blog %}
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+
+
+<html>
+
+<head>
+    <title>Webmag Agency Blog</title>
+</head>
+
+<body>
+    <div class="container" id="blog">
+        <div>
+            <a href="/">
+                <h2 class=titre_blog>Webmag Agency Blog</h2>
+            </a>
+            <a href="{% url 'post_new' %}" class="top-menu">Ajouter</a>
+        </div>
+        {% block content %} {% for post in posts %}
+        <div>
+
+            <a href="{% url 'post_detail' pk=post.pk %}">
+                <h3 class=titre_publication>{{ post.title }}</h3>
+            </a>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p>published: {{ post.published_date }}</p>
+        </div>
+        {% endfor %} {% endblock %}
+    </div>
+</body>
+
+</html>
+{% endblock %}

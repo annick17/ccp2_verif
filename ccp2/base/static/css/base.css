@@ -37,15 +37,34 @@
         font-size: .75rem;
     }
     
+    .titre_blog {
+        font-size: 30px;
+        color: #9d592a;
+        text-shadow: 2px 2px 8px black;
+        text-decoration: underline;
+    }
+    
     #contact {
         position: absolute;
         top: 20%;
         left: 35%;
     }
     
+    #blog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
     h3 {
         font-size: 23px;
         color: white;
+    }
+    
+    .titre_publication {
+        font-size: 20px;
+        color: #9d592a;
     }
     
     h4 {
@@ -166,6 +185,10 @@
     
     #nav {
         float: right;
+    }
+    
+    .logo {
+        z-index: 99;
     }
     /* media queries */
     
