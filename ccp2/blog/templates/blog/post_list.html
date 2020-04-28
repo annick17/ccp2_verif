@@ -19,7 +19,9 @@
             <a href="/">
                 <h2 class=titre_blog>Webmag Agency Blog</h2>
             </a>
-            <a href="{% url 'post_new' %}" class="top-menu">Ajouter</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu">
+                <button type="submit" class="save btn btn-default">Ajouter</button></a>{% endif %}
         </div>
         {% block content %} {% for post in posts %}
         <div>
