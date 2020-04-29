@@ -32,11 +32,6 @@
         left: 35%;
     }
     
-    h2 {
-        color: black;
-        font-size: .75rem;
-    }
-    
     .titre_blog {
         font-size: 30px;
         color: #9d592a;
@@ -53,8 +48,13 @@
     #blog {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 70%;
         transform: translate(-50%, -50%);
+    }
+    
+    h2 {
+        color: black;
+        font-size: .75rem;
     }
     
     h3 {
