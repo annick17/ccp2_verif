@@ -1,38 +1,51 @@
-{% extends 'base/base.html' %} {% load static %} {% block blog %}
+{% load static %} {% block blog %}
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-</head>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
-
-
-<html>
-
-<head>
     <title>Webmag Agency Blog</title>
 </head>
 
 <body>
-    <div class="container" id="blog">
-        <div>
-            <a href="/">
-                <h2 class=titre_blog>Webmag Agency Blog</h2>
-            </a>
-            <a href="{% url 'post_new' %}" class="top-menu">Ajouter</a>
+    <div class="container-fluid" id="blog">
+        <div class="row">
+            <div class="col-6">
+                <a href="/">
+                    <h2 class=titre_blog>Webmag Agency Blog</h2>
+                </a>
+            </div>
+            {% if user.is_authenticated %}
+            <div class="col-5 offset-1 d-flex justify-content-between">
+                <a href="{% url 'post_new' %}">
+                    <button type="submit" class="btn btn-default">Ajouter</button></a>
+                <a href="{% url 'post_draft_list' %}">
+                    <button type="submit" class="btn btn-default">Editer</button></a>
+            </div>
+
+            {% endif %}
         </div>
+
         {% block content %} {% for post in posts %}
         <div>
-
             <a href="{% url 'post_detail' pk=post.pk %}">
                 <h3 class=titre_publication>{{ post.title }}</h3>
             </a>
-            <p>{{ post.text|linebreaksbr }}</p>
-            <p>published: {{ post.published_date }}</p>
+            <p id="date">published: {{ post.published_date }}</p>
+            <p>{{ post.accroche|linebreaksbr }}<a href="{% url 'post_detail' pk=post.pk %}" style="color:#9d592a; font-size: 12px;"><i>...En savoir plus...</i></a></p>
+
+            <hr align="center">
+
         </div>
         {% endfor %} {% endblock %}
     </div>
 </body>
 
-</html>
-{% endblock %}
+</html>{% endblock %}

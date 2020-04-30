@@ -14,7 +14,6 @@
     <title>Webmag Agency Blog</title>
 </head>
 
-
 <body>
 
 
@@ -29,18 +28,19 @@
                 </a>
             </div>
         </div>
+        {% for post in posts %}
         <div class="row">
-            <div class="col-12">
-                <h3 class="titre_new text-center">Nouvel article</h3>
+            <div class="post" style="margin-bottom: 7%">
+
+                <h3 class="titre_drafts"><a href="{% url 'post_detail' pk=post.pk %}" style="color:#9d592a; font-size: 18px">{{ post.title }}</a></h3>
+                <p><i>{{ post.auteur|linebreaksbr }}</i></p>
+                <p>{{ post.text|truncatechars:200 }}</p>
+                <p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
             </div>
-        </div>
-        <div class="row">
-            <form method="POST" enctype="multipart/form-data" class="post-form">{% csrf_token %} {{ form.as_p }}
-                <button type="submit" class="save btn btn-default">Sauvegarder</button>
-            </form>
-        </div>
+        </div>{% endfor %}
     </div>
 </body>
 
 </html>
+
 {% endblock %}

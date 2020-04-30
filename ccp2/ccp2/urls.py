@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.urls import path, include
 from django.contrib import admin
-
+from django.conf import settings 
 
 from django.contrib.auth import views
 
@@ -27,5 +27,6 @@ urlpatterns = [
     path('', include('base.urls')),
     path('email/', include('sendemail.urls')),
     path('blog/', include('blog.urls')),
+    
 ]
 
