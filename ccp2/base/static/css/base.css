@@ -4,6 +4,7 @@
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 14px;
         width: 100vw;
+        box-sizing: border-box;
     }
     
     .img-fluid {
@@ -32,24 +33,10 @@
         left: 35%;
     }
     
-    .titre_blog {
-        font-size: 30px;
-        color: #9d592a;
-        text-shadow: 2px 2px 8px black;
-        text-decoration: underline;
-    }
-    
     #contact {
         position: absolute;
         top: 20%;
         left: 35%;
-    }
-    
-    #blog {
-        position: absolute;
-        top: 50%;
-        left: 70%;
-        transform: translate(-50%, -50%);
     }
     
     h2 {
@@ -60,11 +47,6 @@
     h3 {
         font-size: 23px;
         color: white;
-    }
-    
-    .titre_publication {
-        font-size: 20px;
-        color: #9d592a;
     }
     
     h4 {
@@ -189,6 +171,8 @@
     
     .logo {
         z-index: 99;
+        position: fixed;
+        height: 25%;
     }
     /* media queries */
     

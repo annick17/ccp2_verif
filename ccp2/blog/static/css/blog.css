@@ -1,0 +1,68 @@
+#blog {
+    background-color: #e0f1f9;
+    padding-top: 18%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.titre_blog {
+    font-size: 30px;
+    color: #9d592a;
+    text-shadow: 2px 2px 8px black;
+    text-decoration: underline;
+    padding-bottom: 15%;
+    font-size: 18px;
+}
+
+#nav {
+    float: right;
+}
+
+.logo {
+    z-index: 99;
+}
+
+.importantbordel {
+    color: #9d592a;
+    text-shadow: 2px 2px 8px black;
+    text-decoration: underline;
+}
+
+.titre_publication {
+    font-size: 16px;
+    color: #9d592a;
+}
+
+.titre_publication:hover {
+    font-size: 20px;
+}
+
+hr {
+    border-top: 2px solid;
+    width: 60%;
+}
+
+#date {
+    font-size: 10px;
+}
+
+.btn {
+    border: 1px solid #09326e;
+}
+
+#id_text {
+    height: 30px;
+}
+
+@media screen and (min-width: 961px) {
+    #blog {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #e0f1f9;
+        padding-top: 25%;
+        padding-left: 15%;
+        padding-right: 5%;
+    }
+}
