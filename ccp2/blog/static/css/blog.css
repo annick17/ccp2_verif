@@ -1,8 +1,31 @@
+body,
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
 #blog {
     background-color: #e0f1f9;
-    padding-top: 18%;
+    padding-top: 5%;
     padding-left: 8%;
     padding-right: 8%;
+    height: 300vh;
+}
+
+#blog_detail {
+    background-color: #e0f1f9;
+    padding: 5%;
+    width: 100vw;
+    height: 600vh;
+}
+
+#post_edit {
+    background-color: #e0f1f9;
+    padding: 5%;
+    width: 100vw;
+    height: 300vh;
 }
 
 .titre_blog {
@@ -11,6 +34,15 @@
     text-shadow: 2px 2px 8px black;
     text-decoration: underline;
     padding-bottom: 15%;
+    font-size: 18px;
+}
+
+.titre_blog1 {
+    font-size: 30px;
+    color: #9d592a;
+    text-shadow: 2px 2px 8px black;
+    text-decoration: underline;
+    padding-bottom: 8%;
     font-size: 18px;
 }
 
@@ -33,7 +65,17 @@
     color: #9d592a;
 }
 
+.titre_new {
+    font-size: 18px;
+    color: #9d592a;
+    padding-bottom: 6%;
+}
+
 .titre_publication:hover {
+    font-size: 20px;
+}
+
+.titre_drafts:hover {
     font-size: 20px;
 }
 
@@ -48,6 +90,11 @@ hr {
 
 .btn {
     border: 1px solid #09326e;
+}
+
+.post-form {
+    top: 50%;
+    left: 50%;
 }
 
 #id_text {

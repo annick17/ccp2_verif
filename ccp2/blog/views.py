@@ -6,6 +6,9 @@ from .forms import PostForm
 
 # Create your views here.
 
+def blog(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/blog.html', {'posts': posts})
 
 
 def post_list(request):
