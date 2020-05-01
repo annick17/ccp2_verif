@@ -27,9 +27,9 @@
             </div>
             {% endblock %}
             <div class="row">
-                <nav class="col-11 offset-1 col-md-12 navbar navbar-expand-md fixed-top justify-content-end" id="navbar">
+                <nav class="col-11 offset-1 col-md-11 navbar navbar-expand-md fixed-top justify-content-end" id="navbar">
                     {% if user.is_authenticated %}
-                    <h2> Bienvenue {{ user.username }} ! &emsp;&emsp;&emsp;&emsp;
+                    <h2>
                         <a href="{% url 'logout' %}">DECONNEXION</a> </h2>{% else %}
 
                     <a class="nav-link active" href="{% url 'login' %}">
@@ -43,7 +43,7 @@
                     <a class="nav-link" href="#"><strong><h2 class="importantbordel">NOUS RECRUTONS</h2></strong></a>
                 </nav>
             </div>
-            {% block titre %}{% endblock %} {% block blog %} {% endblock %}
+            {% block titre %}{% endblock %}
         </div>
     </div>
 

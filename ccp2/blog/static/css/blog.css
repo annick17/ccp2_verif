@@ -25,7 +25,7 @@ html {
     background-color: #e0f1f9;
     padding: 5%;
     width: 100vw;
-    height: 300vh;
+    height: 220vh;
 }
 
 .titre_blog {
@@ -93,23 +93,38 @@ hr {
 }
 
 .post-form {
-    top: 50%;
+    top: 130%;
     left: 50%;
 }
 
 #id_text {
-    height: 30px;
+    height: 60px;
 }
 
 @media screen and (min-width: 961px) {
     #blog {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         background-color: #e0f1f9;
-        padding-top: 25%;
+        padding-top: 5%;
         padding-left: 15%;
         padding-right: 5%;
+    }
+    #blog_detail {
+        padding: 9%;
+    }
+    #post_edit {
+        padding: 10%;
+        height: 125vh;
+    }
+    .post-form {
+        top: 80%;
+    }
+    .titre_blog {
+        padding-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .post-form {
+        top: 64%;
     }
 }

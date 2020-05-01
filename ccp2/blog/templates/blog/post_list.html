@@ -1,4 +1,4 @@
-{% load static %} {% block blog %}
+{% load static %}
 <html lang="en">
 
 <head>
@@ -15,15 +15,50 @@
 </head>
 
 <body>
+
+    <div class="container-fluid d-none d-md-block">
+        <div class="row">
+            {% block logo %}
+            <div class="col-2 ">
+                <a href="{% url 'accueil' %}" class="logo">
+                    <img src="{% static 'img/logo2.png' %}" class="img-fluid" alt="logo" id="logo">
+                </a>
+            </div>
+            {% endblock %}
+            <div class="row">
+                <nav class="col-11 offset-1 col-md-11 navbar navbar-expand-md fixed-top justify-content-end" id="navbar">
+                    {% if user.is_authenticated %}
+                    <h2><a href="{% url 'logout' %}">DECONNEXION</a></h2>{% else %}
+
+                    <a class="nav-link active" href="{% url 'login' %}">
+                        <h2>CONNEXION</h2>
+                    </a>
+                    {% endif %}
+                    <a class="nav-link" href="#">
+                        <h2>FORMATION</h2>
+                    </a>
+                    <a class="nav-link" href="{% url 'contact' %}"><strong><h2 class="importantbordel">CONTACTEZ-NOUS</h2></strong></a>
+                    <a class="nav-link" href="#"><strong><h2 class="importantbordel">NOUS RECRUTONS</h2></strong></a>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
     <div class="container-fluid" id="blog">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 d-block d-sm-none">
                 <a href="/">
                     <h2 class=titre_blog>Webmag Agency Blog</h2>
                 </a>
             </div>
+            <div class="col-6 d-none d-sm-block">
+
+                <h2 class=titre_blog>Webmag Agency Blog</h2>
+
+            </div>
             {% if user.is_authenticated %}
-            <div class="col-5 offset-1 d-flex justify-content-between">
+            <div class="col-5 col-md-3 offset-1 offset-md-3 col-xl-2 offset-xl-4 d-flex justify-content-between">
                 <a href="{% url 'post_new' %}">
                     <button type="submit" class="btn btn-default">Ajouter</button></a>
                 <a href="{% url 'post_draft_list' %}">
@@ -48,4 +83,4 @@
     </div>
 </body>
 
-</html>{% endblock %}
+</html>
