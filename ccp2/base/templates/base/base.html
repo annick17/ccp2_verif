@@ -27,7 +27,7 @@
             </div>
             {% endblock %}
             <div class="row">
-                <nav class="col-11 offset-1 col-md-11 navbar navbar-expand-md fixed-top justify-content-end" id="navbar">
+                <nav class="col-12  col-md-12  navbar navbar-expand-md fixed-top justify-content-end" id="navbar">
                     {% if user.is_authenticated %}
                     <h2>
                         <a href="{% url 'logout' %}">DECONNEXION</a> </h2>{% else %}
@@ -50,20 +50,20 @@
 
 
     {% block accueil %} {% endblock %} {% block page_content %} {% endblock %} {% block contact %} {% endblock %}
-    <!-- <script>
+    <script>
         window.onscroll = function() {
             scrollFunction()
         };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-                document.getElementById("navbar").style.padding = "30px 10px";
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 60) {
+                document.getElementById("navbar").style.height = "6%";
 
             } else {
-                document.getElementById("navbar").style.padding = "80px 10px";
+                document.getElementById("navbar").style.height = "10%";
 
             }
-        } -->
+        }
     </script>
 
 
