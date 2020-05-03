@@ -137,7 +137,7 @@
                     <a class="portfolio-link " data-toggle="modal " href="# ">
                         <div class="portfolio-hover ">
                             <div class="portfolio-hover-content ">
-                                <h4>Espace coworking</h4>
+                                <h4>Espace co-working</h4>
                             </div>
                         </div>
                         <img class="img-fluid portfolio-img" src="{% static 'img/coworking.PNG' %} " alt="coworking ">
@@ -217,7 +217,7 @@
                         <a href="#! ">Espace projets</a>
                     </p>
                     <p>
-                        <a href="#! ">Espace Coworking</a>
+                        <a href="#! ">Espace co-working</a>
                     </p>
                     <p>
                         <a href="#! ">Nos références</a>
@@ -226,7 +226,7 @@
                         <a href="#! ">Annuaire</a>
                     </p>
                     <p>
-                        <a href="#! ">Blog</a>
+                        <a href="{% url 'post_list' %}">Blog</a>
                     </p>
                     <p>
                         <a href="#! ">Agenda</a>
@@ -297,6 +297,9 @@
                 <hr class="w-100 clearfix d-md-none ">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
                     <h6 class="text-uppercase mb-4 font-weight-bold ">Contactez nous</h6>
+                    <p>
+                        <a href="{% url 'contact' %}">Contactez-nous</a>
+                    </p>
                     <p>
                         <i class="fa fa-edit mr-3 " aria-hidden="true "></i>Prendre un rendez-vous
                     </p>

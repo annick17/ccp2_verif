@@ -8,23 +8,56 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
     <title>Webmag Agency Blog</title>
 </head>
 
 <body>
+    <div class="container-fluid d-none d-md-block">
+        <div class="row">
+            {% block logo %}
+            <div class="col-2 ">
+                <a href="{% url 'accueil' %}" class="logo">
+                    <img src="{% static 'img/logo2.png' %}" class="img-fluid" alt="logo" id="logo">
+                </a>
+            </div>
+            {% endblock %}
+            <div class="row">
+                <nav class="col-12 col-md-12 navbar navbar-expand-md fixed-top justify-content-end" id="navbar">
+                    {% if user.is_authenticated %}
+                    <h2><a href="{% url 'logout' %}">DECONNEXION</a></h2>{% else %}
 
+                    <a class="nav-link active" href="{% url 'login' %}">
+                        <h2>CONNEXION</h2>
+                    </a>
+                    {% endif %}
+                    <a class="nav-link" href="#">
+                        <h2>FORMATION</h2>
+                    </a>
+                    <a class="nav-link" href="{% url 'contact' %}"><strong><h2 class="importantbordel">CONTACTEZ-NOUS</h2></strong></a>
+                    <a class="nav-link" href="#"><strong><h2 class="importantbordel">NOUS RECRUTONS</h2></strong></a>
+                </nav>
+            </div>
 
+        </div>
+    </div>
     <div class="container-fluid" id="post_edit">
         <div class="row">
-            <div class="col-6">
+            <div class="col-5 d-block d-sm-none">
                 <a href="/">
                     <h2 class=titre_blog>Webmag Agency</h2>
                 </a>
+            </div>
+            <div class="col-5 offset-2 d-block d-sm-none">
                 <a href="{% url 'post_list'%}">
                     <h2 class=titre_blog>Blog</h2>
+                </a>
+            </div>
+            <div class="col-md-6 offset-md-1 d-none d-md-block">
+                <a href="{% url 'post_list'%}">
+                    <h2 class=titre_blog>Webmag Agency Blog</h2>
                 </a>
             </div>
         </div>
@@ -39,6 +72,23 @@
             </div>
         </div>{% endfor %}
     </div>
+
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 40) {
+                document.getElementById("navbar").style.height = "4%";
+
+            } else {
+                document.getElementById("navbar").style.height = "8%";
+
+            }
+        }
+    </script>
+
 </body>
 
 </html>
